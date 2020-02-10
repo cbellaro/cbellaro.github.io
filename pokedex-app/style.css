@@ -1,3 +1,321 @@
-*{
-    background-color: red;
+body{
+    background-color: rgb(214,13,40);
+    margin: 0;
+}
+
+.circle{
+    background-color: rgb(42,176,255);
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    display: inline-block;
+    border: white solid 15px;
+    margin-left: 7%;
+    margin-top: 7%;
+    position: relative;
+}
+
+.inner-circle{
+    background-color: rgb(71,117,180);
+    height: 145px;
+    width: 145px;
+    border-radius: 50%;
+    display: inline-block;
+    left: 8%;
+    top: 8%;
+    position: relative;
+}
+
+.innermost-circle{
+    background-color: rgb(42,176,255);
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    display: inline-block;
+    left: 4%;
+    top: 3%;
+    position: relative;
+}
+
+.circle-shine{
+    background-color: rgb(149,213,255);
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    display: inline-block;
+    left: 20%;
+    top: 15%;
+    position: relative;
+}
+
+.small-circle1{
+    background-color: rgb(233,32,32);
+    border: black 5px solid;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 60px;
+    margin-top: 60px;
+    position: absolute;
+}
+
+.small-circle2{
+    background-color: rgb(254,253,1);
+    border: black 5px solid;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 160px;
+    margin-top: 60px;
+    position: absolute;
+}
+
+.small-circle3{
+    background-color: rgb(107,137,53);
+    border: black 5px solid;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 260px;
+    margin-top: 60px;
+    position: absolute;
+}
+
+.small-shine1{
+    background-color: rgb(243,110,106);
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    margin-left: 10px;
+    margin-top: 8px;
+}
+
+.small-shine2{
+    background-color: rgb(249,255,137);
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    margin-left: 10px;
+    margin-top: 8px;
+}
+
+.small-shine3{
+    background-color: rgb(167,206,145);
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    margin-left: 10px;
+    margin-top: 8px;
+}
+
+.border{
+    background-color: black;
+    display: inline-block;
+    width: 100%;
+    height: 15px;
+    margin-top: 5%;
+}
+
+.screen-background{
+    background-color: rgb(217,217,217);
+    display: inline-block;
+    position: absolute;
+    width: 80%;
+    height: 40%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10%;
+    border: black solid 5px;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+.screen{
+    background-color: rgb(240,240,240);
+    display: inline-block;
+    position: absolute;
+    width: 80%;
+    height: 73%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10%;
+    border: black solid 5px;
+    box-sizing: border-box;
+    border-radius: 20px
+
+}
+
+.circle4{
+    background-color: rgb(255,4,40);
+    display: inline-block;
+    position: absolute;
+    width: 5%;
+    height: 5%;
+    border-radius: 50%;
+    border: 5px solid black;
+    margin-top: 76%;
+    margin-left: 12%;
+
+}
+
+.oval1{
+    background-color: black;
+    width: 10%;
+    height: 1%;
+    display: inline-block;
+    position: absolute;
+    margin-top: 75%;
+    margin-left: 80%;
+}
+
+.oval2{
+    background-color: black;
+    width: 10%;
+    height: 1%;
+    display: inline-block;
+    position: absolute;
+    margin-top: 78%;
+    margin-left: 80%;
+}
+
+.oval3{
+    background-color: black;
+    width: 10%;
+    height: 1%;
+    display: inline-block;
+    position: absolute;
+    margin-top: 81%;
+    margin-left: 80%;
+}
+
+.screen-fix{
+    background-color: rgb(214,13,40);
+    display: inline-block;
+    position: absolute;
+    border-top: black solid 5px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-left: 10%;
+    margin-top: 74%;
+    height: 10%;
+    width: 8%;
+    transform: skewY(40deg);
+}
+
+.circle5{
+    background-color: rgb(255,4,40);
+    display: inline-block;
+    position: absolute;
+    width: 3%;
+    height: 3%;
+    border-radius: 50%;
+    border: 5px solid black;
+    margin-top: 3%;
+    margin-left: 40%;
+}
+
+.circle6{
+    background-color: rgb(255,4,40);
+    display: inline-block;
+    position: absolute;
+    width: 3%;
+    height: 3%;
+    border-radius: 50%;
+    border: 5px solid black;
+    margin-top: 3%;
+    margin-left: 60%;
+}
+
+.on{
+    background-color: rgb(0,43,39);
+    display: inline-block;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid black;
+    box-sizing: border-box;
+    margin-top: 85%;
+    margin-left: 10%;
+}
+
+::placeholder{
+    color: rgb(43,97,52);
+}
+
+input {
+    background-color: rgb(69,150,81);
+    color: rgb(43,97,52);
+    border: 5px black solid;
+    border-radius: 10px;
+    margin-top: 90%;
+    margin-left: 33%;
+    height: 200px;
+    width: 300px;
+    font-size: 68px;
+    text-align: center;
+}
+
+.up{
+    background-color: rgb(0,43,39);
+    width: 75px;
+    height: 75px;
+    margin-left: 77.7%;
+    margin-top: -24.7%;
+    position: absolute;
+    border: solid black 1px;
+    box-sizing: border-box;
+}
+
+.down{
+    background-color: rgb(0,43,39);
+    width: 75px;
+    height: 75px;
+    margin-left: 77.7%;
+    margin-top: -9.3%;
+    position: absolute;
+    border: solid black 1px;
+    box-sizing: border-box;
+}
+
+.left{
+    background-color: rgb(0,43,39);
+    width: 75px;
+    height: 75px;
+    margin-left: 70%;
+    margin-top: -17%;
+    position: absolute;
+    border: solid black 1px;
+    box-sizing: border-box;
+}
+
+.right{
+    background-color: rgb(0,43,39);
+    width: 75px;
+    height: 75px;
+    margin-left: 85.3%;
+    margin-top: -17%;
+    position: absolute;
+    border: solid black 1px;
+    box-sizing: border-box;
+}
+
+.square{
+    border: solid rgb(0,43,39) 1px;
+    background-color: rgb(0,43,39);
+    box-sizing: border-box;
+    width: 75px;
+    height: 75px;
+    margin-left: 77.7%;
+    margin-top: -17%;
+    position: absolute;
 }
