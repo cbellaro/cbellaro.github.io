@@ -7,6 +7,19 @@ $(() => {
         userInput--
     }
 
+    $('#on-off').on('click', (event)=>{
+        event.preventDefault();
+        $('#screen').toggleClass('on')
+        $('#screen').toggleClass('off')
+        if($('#screen').attr('class') === "off"){
+            $('#sprite').css('visibility','hidden')
+            $('#border-image').css('visibility','hidden')
+        } else if ($('#screen').attr('class') === "on"){
+            $('#sprite').css('visibility','visible')
+            $('#border-image').css('visibility','visible')
+        }
+    });
+
     $('form').on('submit', (event)=>{
         event.preventDefault();
         userInput = $('input[type="number"]').val()

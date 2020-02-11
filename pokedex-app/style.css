@@ -161,7 +161,21 @@ body{
     box-sizing: border-box;
 }
 
-.screen{
+#screen.off{
+    background-color: black;
+    display: inline-block;
+    position: absolute;
+    width: 80%;
+    height: 73%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10%;
+    border: black solid 5px;
+    box-sizing: border-box;
+    border-radius: 20px
+}
+
+#screen.on{
     background-color: rgb(240,240,240);
     display: inline-block;
     position: absolute;
@@ -173,7 +187,6 @@ body{
     border: black solid 5px;
     box-sizing: border-box;
     border-radius: 20px
-
 }
 
 .circle4{
@@ -257,7 +270,7 @@ body{
     margin-left: 60%;
 }
 
-.on{
+#on-off{
     background-color: rgb(0,43,39);
     display: inline-block;
     position: absolute;
