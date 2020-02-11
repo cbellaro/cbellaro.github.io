@@ -12,9 +12,11 @@ $(() => {
         $('#screen').toggleClass('on')
         $('#screen').toggleClass('off')
         if($('#screen').attr('class') === "off"){
+            $('#screen').css('animation','fadeOut .2s');
             $('#sprite').css('visibility','hidden')
             $('#border-image').css('visibility','hidden')
         } else if ($('#screen').attr('class') === "on"){
+            $('#screen').css('animation', 'fadeIn .2s');
             $('#sprite').css('visibility','visible')
             $('#border-image').css('visibility','visible')
         }
