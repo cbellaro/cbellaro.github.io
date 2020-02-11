@@ -4,6 +4,10 @@ body{
     font-family: modular;
 }
 
+br{
+    height: 1%;
+}
+
 .circle{
     background-color: rgb(42,176,255);
     height: 160px;
@@ -703,7 +707,7 @@ input {
         height: 10px;
         border-radius: 50%;
         border: 2.5px solid black;
-        margin-top: 61.3%;
+        margin-top: 520px;
         margin-left: 7%;
 
     }
@@ -714,7 +718,7 @@ input {
         height: 0.5%;
         display: inline-block;
         position: absolute;
-        margin-top: 61%;
+        margin-top: 518px;
         margin-left: 85%;
     }
 
@@ -724,7 +728,7 @@ input {
         height: 0.5%;
         display: inline-block;
         position: absolute;
-        margin-top: 62%;
+        margin-top: 525px;
         margin-left: 85%;
     }
 
@@ -734,7 +738,7 @@ input {
         height: 0.5%;
         display: inline-block;
         position: absolute;
-        margin-top: 63%;
+        margin-top: 532px;
         margin-left: 85%;
     }
 
@@ -746,7 +750,7 @@ input {
         border-radius: 5px;
         box-sizing: border-box;
         margin-left: 10%;
-        margin-top: 50.5%;
+        margin-top: 537px;
         height: 10%;
         width: 3%;
         transform: skewY(40deg);
@@ -785,7 +789,7 @@ input {
         border-radius: 50%;
         border: 2.5px solid black;
         box-sizing: border-box;
-        margin-top: 55%;
+        margin-top: 580px;
         margin-left: 7%;
     }
 
@@ -800,7 +804,7 @@ input {
         color: rgb(43,97,52);
         border: 5px black solid;
         border-radius: 10px;
-        margin-top: 54%;
+        margin-top: 570px;
         margin-left: 33%;
         height: 120px;
         width: 300px;
@@ -814,7 +818,7 @@ input {
         width: 37.5px;
         height: 37.5px;
         margin-left: 77.7%;
-        margin-top: -11.2%;
+        margin-top: -135px;
         position: absolute;
         border: solid black 1px;
         box-sizing: border-box;
@@ -825,7 +829,7 @@ input {
         width: 37.5px;
         height: 37.5px;
         margin-left: 77.7%;
-        margin-top: -4%;
+        margin-top: -59px;
         position: absolute;
         border: solid black 1px;
         box-sizing: border-box;
@@ -836,7 +840,7 @@ input {
         width: 37.5px;
         height: 37.5px;
         margin-left: 74.2%;
-        margin-top: -7.6%;
+        margin-top: -97px;
         position: absolute;
         border: solid black 1px;
         box-sizing: border-box;
@@ -847,7 +851,7 @@ input {
         width: 37.5px;
         height: 37.5px;
         margin-left: 81.2%;
-        margin-top: -7.6%;
+        margin-top: -97px;
         position: absolute;
         border: solid black 1px;
         box-sizing: border-box;
@@ -860,7 +864,7 @@ input {
         width: 37.5px;
         height: 37.5px;
         margin-left: 77.7%;
-        margin-top: -7.6%;
+        margin-top: -97px;
         position: absolute;
     }
 

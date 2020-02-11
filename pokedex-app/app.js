@@ -36,8 +36,8 @@ $(() => {
                 let $name = $('#pokemon-name').text(data.names[3].name).css("font-size","46px").css('margin-left','40%').css('margin-top','10%');
                 let $class = $('#classification').text(data.genera[2].genus).css("font-size","36px").css('margin-left','40%').css('margin-top','-6%');
                 let $dexNum = $('#dex-num').text("No. " + userInput).css("font-size","46px").css('position','absolute').css('margin-left','10%').css('margin-top','32%');
-                let $borderImage = $('#border-image').attr('src','sprites/border.png').css("width","80%").css('position','relative').css('margin-top','10%').css('margin-left','10%');
-                let $flavText = $('#flavor-text').text(data.flavor_text_entries[53].flavor_text).css("font-size","34px").css('position','absolute').css('margin-left','2%').css('margin-top','1%');
+                let $borderImage = $('#border-image').attr('src','sprites/border.png').css("width","10%").css('position','relative').css('margin-top','10%').css('margin-left','10%');
+                let $flavText = $('#flavor-text').text(data.flavor_text_entries[53].flavor_text).css("font-size","30px").css('position','absolute').css('margin-left','2%').css('margin-top','1%');
             },
             () => {
                 console.log('bad request');
@@ -60,7 +60,7 @@ $(() => {
                 let $class = $('#classification').text(data.genera[2].genus).css("font-size","36px").css('margin-left','40%').css('margin-top','-6%');
                 let $dexNum = $('#dex-num').text("No. " + userInput).css("font-size","46px").css('position','absolute').css('margin-left','10%').css('margin-top','32%');
                 let $borderImage = $('#border-image').attr('src','sprites/border.png').css("width","80%").css('position','relative').css('margin-top','10%').css('margin-left','10%');
-                let $flavText = $('#flavor-text').text(data.flavor_text_entries[53].flavor_text).css("font-size","34px").css('position','absolute').css('margin-left','2%').css('margin-top','1%');
+                let $flavText = $('#flavor-text').text(data.flavor_text_entries[53].flavor_text).css("font-size","30px").css('position','absolute').css('margin-left','2%').css('margin-top','1%');
             },
             () => {
                 console.log('bad request');
@@ -83,7 +83,7 @@ $(() => {
                 let $class = $('#classification').text(data.genera[2].genus).css("font-size","36px").css('margin-left','40%').css('margin-top','-6%');
                 let $dexNum = $('#dex-num').text("No. " + userInput).css("font-size","46px").css('position','absolute').css('margin-left','10%').css('margin-top','32%');
                 let $borderImage = $('#border-image').attr('src','sprites/border.png').css("width","80%").css('position','relative').css('margin-top','10%').css('margin-left','10%');
-                let $flavText = $('#flavor-text').text(data.flavor_text_entries[53].flavor_text).css("font-size","34px").css('position','absolute').css('margin-left','2%').css('margin-top','1%');
+                let $flavText = $('#flavor-text').text(data.flavor_text_entries[53].flavor_text).css("font-size","30px").css('position','absolute').css('margin-left','2%').css('margin-top','1%');
             },
             () => {
                 console.log('bad request');
@@ -106,7 +106,7 @@ $(() => {
                 let $class = $('#classification').text(data.genera[2].genus).css("font-size","36px").css('margin-left','40%').css('margin-top','-6%');
                 let $dexNum = $('#dex-num').text("No. " + userInput).css("font-size","46px").css('position','absolute').css('margin-left','10%').css('margin-top','32%');
                 let $borderImage = $('#border-image').attr('src','sprites/border.png').css("width","80%").css('position','relative').css('margin-top','10%').css('margin-left','10%');
-                let $flavText = $('#flavor-text').text(data.flavor_text_entries[53].flavor_text).css("font-size","34px").css('position','absolute').css('margin-left','2%').css('margin-top','1%');
+                let $flavText = $('#flavor-text').text(data.flavor_text_entries[53].flavor_text).css("font-size","30px").css('position','absolute').css('margin-left','2%').css('margin-top','1%');
             },
             () => {
                 console.log('bad request');
@@ -129,7 +129,7 @@ $(() => {
                 let $class = $('#classification').text(data.genera[2].genus).css("font-size","36px").css('margin-left','40%').css('margin-top','-6%');
                 let $dexNum = $('#dex-num').text("No. " + userInput).css("font-size","46px").css('position','absolute').css('margin-left','10%').css('margin-top','32%');
                 let $borderImage = $('#border-image').attr('src','sprites/border.png').css("width","80%").css('position','relative').css('margin-top','10%').css('margin-left','10%');
-                let $flavText = $('#flavor-text').text(data.flavor_text_entries[53].flavor_text).css("font-size","34px").css('position','absolute').css('margin-left','2%').css('margin-top','1%');
+                let $flavText = $('#flavor-text').text(data.flavor_text_entries[53].flavor_text).css("font-size","30px").css('position','absolute').css('margin-left','2%').css('margin-top','1%');
             },
             () => {
                 console.log('bad request');
