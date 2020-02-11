@@ -346,6 +346,30 @@ br{
     margin-left: 60%;
 }
 
+.oval4{
+    background-color: rgb(223,35,33);
+    display: inline-block;
+    position: absolute;
+    width: 10%;
+    height: 1%;
+    border-radius: 35%;
+    border: 5px solid black;
+    margin-top: 92.5%;
+    margin-left: 35%;
+}
+
+.oval5{
+    background-color: rgb(78,120,180);
+    display: inline-block;
+    position: absolute;
+    width: 10%;
+    height: 1%;
+    border-radius: 35%;
+    border: 5px solid black;
+    margin-top: 92.5%;
+    margin-left: 50%;
+}
+
 #on-off{
     background-color: rgb(0,43,39);
     display: inline-block;
@@ -530,8 +554,8 @@ input {
         border-radius: 50%;
         display: inline-block;
         position: relative;
-        margin-left: 10px;
-        margin-top: 8px;
+        margin-left: 5px;
+        margin-top: 4px;
     }
 
     .small-shine2{
@@ -541,8 +565,8 @@ input {
         border-radius: 50%;
         display: inline-block;
         position: relative;
-        margin-left: 10px;
-        margin-top: 8px;
+        margin-left: 5px;
+        margin-top: 4px;
     }
 
     .small-shine3{
@@ -552,8 +576,8 @@ input {
         border-radius: 50%;
         display: inline-block;
         position: relative;
-        margin-left: 10px;
-        margin-top: 8px;
+        margin-left: 5px;
+        margin-top: 4px;
     }
 
     .border{
@@ -780,6 +804,30 @@ input {
         margin-left: 60%;
     }
 
+    .oval4{
+        background-color: rgb(223,35,33);
+        display: inline-block;
+        position: absolute;
+        width: 5%;
+        height: 1%;
+        border-radius: 35%;
+        border: 5px solid black;
+        margin-top: 553px;
+        margin-left: 38%;
+    }
+
+    .oval5{
+        background-color: rgb(78,120,180);
+        display: inline-block;
+        position: absolute;
+        width: 5%;
+        height: 1%;
+        border-radius: 35%;
+        border: 5px solid black;
+        margin-top: 553px;
+        margin-left: 50%;
+    }
+
     #on-off{
         background-color: rgb(0,43,39);
         display: inline-block;
@@ -804,7 +852,7 @@ input {
         color: rgb(43,97,52);
         border: 5px black solid;
         border-radius: 10px;
-        margin-top: 570px;
+        margin-top: 590px;
         margin-left: 33%;
         height: 120px;
         width: 300px;
