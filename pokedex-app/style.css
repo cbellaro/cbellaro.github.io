@@ -614,7 +614,7 @@ input {
         display: inline-block;
         position: absolute;
         width: 80%;
-        height: 60%;
+        height: 500px;
         margin-left: 10%;
         margin-right: 10%;
         margin-top: 1%;
@@ -731,7 +731,7 @@ input {
         height: 10px;
         border-radius: 50%;
         border: 2.5px solid black;
-        margin-top: 520px;
+        margin-top: 478px;
         margin-left: 7%;
 
     }
@@ -774,7 +774,7 @@ input {
         border-radius: 5px;
         box-sizing: border-box;
         margin-left: 10%;
-        margin-top: 537px;
+        margin-top: 493px;
         height: 10%;
         width: 3%;
         transform: skewY(40deg);
@@ -812,7 +812,7 @@ input {
         height: 1%;
         border-radius: 35%;
         border: 5px solid black;
-        margin-top: 553px;
+        margin-top: 508px;
         margin-left: 38%;
     }
 
@@ -824,7 +824,7 @@ input {
         height: 1%;
         border-radius: 35%;
         border: 5px solid black;
-        margin-top: 553px;
+        margin-top: 508px;
         margin-left: 50%;
     }
 
@@ -837,7 +837,7 @@ input {
         border-radius: 50%;
         border: 2.5px solid black;
         box-sizing: border-box;
-        margin-top: 580px;
+        margin-top: 540px;
         margin-left: 7%;
     }
 
@@ -852,9 +852,9 @@ input {
         color: rgb(43,97,52);
         border: 5px black solid;
         border-radius: 10px;
-        margin-top: 590px;
+        margin-top: 545px;
         margin-left: 33%;
-        height: 120px;
+        height: 110px;
         width: 300px;
         font-size: 42px;
         text-align: center;
