@@ -6,6 +6,7 @@ $(() => {
     let decVal = () => {
         userInput--
     }
+    let mq = window.matchMedia( "(min-width: 1024px)" );
 
     $('#on-off').on('click', (event)=>{
         event.preventDefault();
@@ -32,12 +33,21 @@ $(() => {
             url:'https://pokeapi.co/api/v2/pokemon-species/' + userInput +'/'
         }).then(
             (data)=>{
-                let $sprite = $('#sprite-image').attr('src','sprites/' + userInput + '.png').css('position','absolute').css('margin-left','1%').css('width','35%');
-                let $name = $('#pokemon-name').text(data.names[3].name).css("font-size","46px").css('margin-left','40%').css('margin-top','10%');
-                let $class = $('#classification').text(data.genera[2].genus).css("font-size","36px").css('margin-left','40%').css('margin-top','-6%');
-                let $dexNum = $('#dex-num').text("No. " + userInput).css("font-size","46px").css('position','absolute').css('margin-left','10%').css('margin-top','32%');
-                let $borderImage = $('#border-image').attr('src','sprites/border.png').css("width","10%").css('position','relative').css('margin-top','10%').css('margin-left','10%');
-                let $flavText = $('#flavor-text').text(data.flavor_text_entries[53].flavor_text).css("font-size","30px").css('position','absolute').css('margin-left','2%').css('margin-top','1%');
+                if (mq.matches){
+                    let $sprite = $('#sprite-image').attr('src','sprites/' + userInput + '.png').css('position','absolute').css('margin-left','5%').css('width','35%').css('max-width','175px');
+                    let $name = $('#pokemon-name').text(data.names[3].name).css("font-size","64px").css('margin-left','30%').css('margin-top','3%');
+                    let $class = $('#classification').text(data.genera[2].genus).css("font-size","42px").css('margin-left','30%').css('margin-top','-6%');
+                    let $dexNum = $('#dex-num').text("No. " + userInput).css("font-size","46px").css('position','absolute').css('margin-left','8%').css('margin-top','20%');
+                    let $borderImage = $('#border-image').attr('src','sprites/border.png').css("width","80%").css('max-width','700px').css('position','relative').css('margin-top','1%').css('margin-left','10%');
+                    let $flavText = $('#flavor-text').text(data.flavor_text_entries[53].flavor_text).css("font-size","36px").css('position','absolute').css('margin-left','2%').css('margin-top','1%');
+                } else {
+                    let $sprite = $('#sprite-image').attr('src','sprites/' + userInput + '.png').css('position','absolute').css('margin-left','1%').css('width','35%').css('max-width','175px');
+                    let $name = $('#pokemon-name').text(data.names[3].name).css("font-size","46px").css('margin-left','40%').css('margin-top','10%');
+                    let $class = $('#classification').text(data.genera[2].genus).css("font-size","36px").css('margin-left','40%').css('margin-top','-6%');
+                    let $dexNum = $('#dex-num').text("No. " + userInput).css("font-size","46px").css('position','absolute').css('margin-left','10%').css('margin-top','32%');
+                    let $borderImage = $('#border-image').attr('src','sprites/border.png').css("width","80%").css('position','relative').css('margin-top','10%').css('margin-left','10%');
+                    let $flavText = $('#flavor-text').text(data.flavor_text_entries[53].flavor_text).css("font-size","30px").css('position','absolute').css('margin-left','2%').css('margin-top','1%');
+                }
             },
             () => {
                 console.log('bad request');
@@ -55,12 +65,21 @@ $(() => {
             url:'https://pokeapi.co/api/v2/pokemon-species/' + userInput +'/'
         }).then(
             (data)=>{
-                let $sprite = $('#sprite-image').attr('src','sprites/' + userInput + '.png').css('position','absolute').css('margin-left','1%').css('width','35%');
-                let $name = $('#pokemon-name').text(data.names[3].name).css("font-size","46px").css('margin-left','40%').css('margin-top','10%');
-                let $class = $('#classification').text(data.genera[2].genus).css("font-size","36px").css('margin-left','40%').css('margin-top','-6%');
-                let $dexNum = $('#dex-num').text("No. " + userInput).css("font-size","46px").css('position','absolute').css('margin-left','10%').css('margin-top','32%');
-                let $borderImage = $('#border-image').attr('src','sprites/border.png').css("width","80%").css('position','relative').css('margin-top','10%').css('margin-left','10%');
-                let $flavText = $('#flavor-text').text(data.flavor_text_entries[53].flavor_text).css("font-size","30px").css('position','absolute').css('margin-left','2%').css('margin-top','1%');
+                if (mq.matches){
+                    let $sprite = $('#sprite-image').attr('src','sprites/' + userInput + '.png').css('position','absolute').css('margin-left','5%').css('width','35%').css('max-width','175px');
+                    let $name = $('#pokemon-name').text(data.names[3].name).css("font-size","64px").css('margin-left','30%').css('margin-top','3%');
+                    let $class = $('#classification').text(data.genera[2].genus).css("font-size","42px").css('margin-left','30%').css('margin-top','-6%');
+                    let $dexNum = $('#dex-num').text("No. " + userInput).css("font-size","46px").css('position','absolute').css('margin-left','8%').css('margin-top','20%');
+                    let $borderImage = $('#border-image').attr('src','sprites/border.png').css("width","80%").css('max-width','700px').css('position','relative').css('margin-top','1%').css('margin-left','10%');
+                    let $flavText = $('#flavor-text').text(data.flavor_text_entries[53].flavor_text).css("font-size","36px").css('position','absolute').css('margin-left','2%').css('margin-top','1%');
+                } else {
+                    let $sprite = $('#sprite-image').attr('src','sprites/' + userInput + '.png').css('position','absolute').css('margin-left','1%').css('width','35%').css('max-width','175px');
+                    let $name = $('#pokemon-name').text(data.names[3].name).css("font-size","46px").css('margin-left','40%').css('margin-top','10%');
+                    let $class = $('#classification').text(data.genera[2].genus).css("font-size","36px").css('margin-left','40%').css('margin-top','-6%');
+                    let $dexNum = $('#dex-num').text("No. " + userInput).css("font-size","46px").css('position','absolute').css('margin-left','10%').css('margin-top','32%');
+                    let $borderImage = $('#border-image').attr('src','sprites/border.png').css("width","80%").css('position','relative').css('margin-top','10%').css('margin-left','10%');
+                    let $flavText = $('#flavor-text').text(data.flavor_text_entries[53].flavor_text).css("font-size","30px").css('position','absolute').css('margin-left','2%').css('margin-top','1%');
+                }
             },
             () => {
                 console.log('bad request');
@@ -78,12 +97,21 @@ $(() => {
             url:'https://pokeapi.co/api/v2/pokemon-species/' + userInput +'/'
         }).then(
             (data)=>{
-                let $sprite = $('#sprite-image').attr('src','sprites/' + userInput + '.png').css('position','absolute').css('margin-left','1%').css('width','35%');
-                let $name = $('#pokemon-name').text(data.names[3].name).css("font-size","46px").css('margin-left','40%').css('margin-top','10%');
-                let $class = $('#classification').text(data.genera[2].genus).css("font-size","36px").css('margin-left','40%').css('margin-top','-6%');
-                let $dexNum = $('#dex-num').text("No. " + userInput).css("font-size","46px").css('position','absolute').css('margin-left','10%').css('margin-top','32%');
-                let $borderImage = $('#border-image').attr('src','sprites/border.png').css("width","80%").css('position','relative').css('margin-top','10%').css('margin-left','10%');
-                let $flavText = $('#flavor-text').text(data.flavor_text_entries[53].flavor_text).css("font-size","30px").css('position','absolute').css('margin-left','2%').css('margin-top','1%');
+                if (mq.matches){
+                    let $sprite = $('#sprite-image').attr('src','sprites/' + userInput + '.png').css('position','absolute').css('margin-left','5%').css('width','35%').css('max-width','175px');
+                    let $name = $('#pokemon-name').text(data.names[3].name).css("font-size","64px").css('margin-left','30%').css('margin-top','3%');
+                    let $class = $('#classification').text(data.genera[2].genus).css("font-size","42px").css('margin-left','30%').css('margin-top','-6%');
+                    let $dexNum = $('#dex-num').text("No. " + userInput).css("font-size","46px").css('position','absolute').css('margin-left','8%').css('margin-top','20%');
+                    let $borderImage = $('#border-image').attr('src','sprites/border.png').css("width","80%").css('max-width','700px').css('position','relative').css('margin-top','1%').css('margin-left','10%');
+                    let $flavText = $('#flavor-text').text(data.flavor_text_entries[53].flavor_text).css("font-size","36px").css('position','absolute').css('margin-left','2%').css('margin-top','1%');
+                } else {
+                    let $sprite = $('#sprite-image').attr('src','sprites/' + userInput + '.png').css('position','absolute').css('margin-left','1%').css('width','35%').css('max-width','175px');
+                    let $name = $('#pokemon-name').text(data.names[3].name).css("font-size","46px").css('margin-left','40%').css('margin-top','10%');
+                    let $class = $('#classification').text(data.genera[2].genus).css("font-size","36px").css('margin-left','40%').css('margin-top','-6%');
+                    let $dexNum = $('#dex-num').text("No. " + userInput).css("font-size","46px").css('position','absolute').css('margin-left','10%').css('margin-top','32%');
+                    let $borderImage = $('#border-image').attr('src','sprites/border.png').css("width","80%").css('position','relative').css('margin-top','10%').css('margin-left','10%');
+                    let $flavText = $('#flavor-text').text(data.flavor_text_entries[53].flavor_text).css("font-size","30px").css('position','absolute').css('margin-left','2%').css('margin-top','1%');
+                }
             },
             () => {
                 console.log('bad request');
@@ -101,12 +129,21 @@ $(() => {
             url:'https://pokeapi.co/api/v2/pokemon-species/' + userInput +'/'
         }).then(
             (data)=>{
-                let $sprite = $('#sprite-image').attr('src','sprites/' + userInput + '.png').css('position','absolute').css('margin-left','1%').css('width','35%');
-                let $name = $('#pokemon-name').text(data.names[3].name).css("font-size","46px").css('margin-left','40%').css('margin-top','10%');
-                let $class = $('#classification').text(data.genera[2].genus).css("font-size","36px").css('margin-left','40%').css('margin-top','-6%');
-                let $dexNum = $('#dex-num').text("No. " + userInput).css("font-size","46px").css('position','absolute').css('margin-left','10%').css('margin-top','32%');
-                let $borderImage = $('#border-image').attr('src','sprites/border.png').css("width","80%").css('position','relative').css('margin-top','10%').css('margin-left','10%');
-                let $flavText = $('#flavor-text').text(data.flavor_text_entries[53].flavor_text).css("font-size","30px").css('position','absolute').css('margin-left','2%').css('margin-top','1%');
+                if (mq.matches){
+                    let $sprite = $('#sprite-image').attr('src','sprites/' + userInput + '.png').css('position','absolute').css('margin-left','5%').css('width','35%').css('max-width','175px');
+                    let $name = $('#pokemon-name').text(data.names[3].name).css("font-size","64px").css('margin-left','30%').css('margin-top','3%');
+                    let $class = $('#classification').text(data.genera[2].genus).css("font-size","42px").css('margin-left','30%').css('margin-top','-6%');
+                    let $dexNum = $('#dex-num').text("No. " + userInput).css("font-size","46px").css('position','absolute').css('margin-left','8%').css('margin-top','20%');
+                    let $borderImage = $('#border-image').attr('src','sprites/border.png').css("width","80%").css('max-width','700px').css('position','relative').css('margin-top','1%').css('margin-left','10%');
+                    let $flavText = $('#flavor-text').text(data.flavor_text_entries[53].flavor_text).css("font-size","36px").css('position','absolute').css('margin-left','2%').css('margin-top','1%');
+                } else {
+                    let $sprite = $('#sprite-image').attr('src','sprites/' + userInput + '.png').css('position','absolute').css('margin-left','1%').css('width','35%').css('max-width','175px');
+                    let $name = $('#pokemon-name').text(data.names[3].name).css("font-size","46px").css('margin-left','40%').css('margin-top','10%');
+                    let $class = $('#classification').text(data.genera[2].genus).css("font-size","36px").css('margin-left','40%').css('margin-top','-6%');
+                    let $dexNum = $('#dex-num').text("No. " + userInput).css("font-size","46px").css('position','absolute').css('margin-left','10%').css('margin-top','32%');
+                    let $borderImage = $('#border-image').attr('src','sprites/border.png').css("width","80%").css('position','relative').css('margin-top','10%').css('margin-left','10%');
+                    let $flavText = $('#flavor-text').text(data.flavor_text_entries[53].flavor_text).css("font-size","30px").css('position','absolute').css('margin-left','2%').css('margin-top','1%');
+                }
             },
             () => {
                 console.log('bad request');
@@ -124,12 +161,21 @@ $(() => {
             url:'https://pokeapi.co/api/v2/pokemon-species/' + userInput +'/'
         }).then(
             (data)=>{
-                let $sprite = $('#sprite-image').attr('src','sprites/' + userInput + '.png').css('position','absolute').css('margin-left','1%').css('width','35%');
-                let $name = $('#pokemon-name').text(data.names[3].name).css("font-size","46px").css('margin-left','40%').css('margin-top','10%');
-                let $class = $('#classification').text(data.genera[2].genus).css("font-size","36px").css('margin-left','40%').css('margin-top','-6%');
-                let $dexNum = $('#dex-num').text("No. " + userInput).css("font-size","46px").css('position','absolute').css('margin-left','10%').css('margin-top','32%');
-                let $borderImage = $('#border-image').attr('src','sprites/border.png').css("width","80%").css('position','relative').css('margin-top','10%').css('margin-left','10%');
-                let $flavText = $('#flavor-text').text(data.flavor_text_entries[53].flavor_text).css("font-size","30px").css('position','absolute').css('margin-left','2%').css('margin-top','1%');
+                if (mq.matches){
+                    let $sprite = $('#sprite-image').attr('src','sprites/' + userInput + '.png').css('position','absolute').css('margin-left','5%').css('width','35%').css('max-width','175px');
+                    let $name = $('#pokemon-name').text(data.names[3].name).css("font-size","64px").css('margin-left','30%').css('margin-top','3%');
+                    let $class = $('#classification').text(data.genera[2].genus).css("font-size","42px").css('margin-left','30%').css('margin-top','-6%');
+                    let $dexNum = $('#dex-num').text("No. " + userInput).css("font-size","46px").css('position','absolute').css('margin-left','8%').css('margin-top','20%');
+                    let $borderImage = $('#border-image').attr('src','sprites/border.png').css("width","80%").css('max-width','700px').css('position','relative').css('margin-top','1%').css('margin-left','10%');
+                    let $flavText = $('#flavor-text').text(data.flavor_text_entries[53].flavor_text).css("font-size","36px").css('position','absolute').css('margin-left','2%').css('margin-top','1%');
+                } else {
+                    let $sprite = $('#sprite-image').attr('src','sprites/' + userInput + '.png').css('position','absolute').css('margin-left','1%').css('width','35%').css('max-width','175px');
+                    let $name = $('#pokemon-name').text(data.names[3].name).css("font-size","46px").css('margin-left','40%').css('margin-top','10%');
+                    let $class = $('#classification').text(data.genera[2].genus).css("font-size","36px").css('margin-left','40%').css('margin-top','-6%');
+                    let $dexNum = $('#dex-num').text("No. " + userInput).css("font-size","46px").css('position','absolute').css('margin-left','10%').css('margin-top','32%');
+                    let $borderImage = $('#border-image').attr('src','sprites/border.png').css("width","80%").css('position','relative').css('margin-top','10%').css('margin-left','10%');
+                    let $flavText = $('#flavor-text').text(data.flavor_text_entries[53].flavor_text).css("font-size","30px").css('position','absolute').css('margin-left','2%').css('margin-top','1%');
+                }
             },
             () => {
                 console.log('bad request');
