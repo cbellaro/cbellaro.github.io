@@ -4,6 +4,13 @@ body{
     font-family: modular;
 }
 
+.container{
+    max-width: 1200px;
+    max-height: 850px;
+    min-width: 300px;
+    background-color: rgb(214,13,40);
+}
+
 br{
     height: 1%;
 }
@@ -467,9 +474,10 @@ input {
 
 @media (min-width: 1024px){
 
-    body{
+    .container{
         max-width: 1200px;
         max-height: 850px;
+        min-width: 300px;
     }
 
     .circle{
@@ -593,26 +601,30 @@ input {
         height: 7.5px;
         margin-top: 8.3%;
         position: relative;
+        max-width: 240px;
     }
 
     .border2{
         background-color: black;
-        display: inline-block;
+        display: block;
         position: absolute;
         width: 6.5%;
         height: 7.5px;
-        margin-top: 5.9%;
+        margin-top: -40px;
+        margin-left: 240px;
         transform: skewY(-35deg);
+        max-width: 80px;
     }
 
     .border3{
         background-color: black;
         display: inline-block;
-        width: 71%;
+        width: 73.4%;
         height: 7.5px;
-        margin-top: 3.7%;
+        margin-top: 43px;
         margin-left: 6.5%;
         position: absolute;
+        max-width: 100%;
     }
 
     .screen-background{
@@ -778,11 +790,13 @@ input {
         border-top: black solid 5px;
         border-radius: 5px;
         box-sizing: border-box;
-        margin-left: 10%;
+        margin-left: 120px;
         margin-top: -21px;
         height: 10%;
         width: 3%;
         transform: skewY(40deg);
+        max-height: 35px;
+        max-width: 40px;
     }
 
     .circle5{
@@ -857,7 +871,7 @@ input {
         color: rgb(43,97,52);
         border: 5px black solid;
         border-radius: 10px;
-        margin-top: 20px;
+        margin-top: 15px;
         margin-left: auto;
         margin-right: auto;
         display: block;
@@ -908,7 +922,7 @@ input {
         background-color: rgb(0,43,39);
         width: 30px;
         height: 30px;
-        margin-left: 80.2%;
+        margin-left: 80%;
         margin-top: -59px;
         position: absolute;
         display: block;
