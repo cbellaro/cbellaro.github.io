@@ -41,6 +41,19 @@
   animation-direction: alternate;
 }
 
+.screen::after{
+  content: "";
+  background: rgba(18, 16, 16, 0.1);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  display: block;
+  opacity: 0;
+  animation: screen-flicker 1.5s infinite;
+}
+
 .scanlines {
   position: absolute;
   height: 50px;
@@ -117,6 +130,72 @@ input:-webkit-autofill {
   to{top: 93%;}
 }
 
+@keyframes screen-flicker {
+  0% {
+    opacity: 0.28;
+  }
+  5% {
+    opacity: 0.35;
+  }
+  10% {
+    opacity: 0.24;
+  }
+  15% {
+    opacity: 0.91;
+  }
+  20% {
+    opacity: 0.18;
+  }
+  25% {
+    opacity: 0.84;
+  }
+  30% {
+    opacity: 0.66;
+  }
+  35% {
+    opacity: 0.68;
+  }
+  40% {
+    opacity: 0.27;
+  }
+  45% {
+    opacity: 0.85;
+  }
+  50% {
+    opacity: 0.96;
+  }
+  55% {
+    opacity: 0.09;
+  }
+  60% {
+    opacity: 0.20;
+  }
+  65% {
+    opacity: 0.72;
+  }
+  70% {
+    opacity: 0.53;
+  }
+  75% {
+    opacity: 0.37;
+  }
+  80% {
+    opacity: 0.71;
+  }
+  85% {
+    opacity: 0.70;
+  }
+  90% {
+    opacity: 0.70;
+  }
+  95% {
+    opacity: 0.36;
+  }
+  100% {
+    opacity: 0.24;
+  }
+}
+
 @keyframes animated-text{
   from{width: 0;}
   to{width: 245px;}
@@ -180,6 +259,19 @@ input:-webkit-autofill {
     text-align: center;
     animation: glow 5s infinite;
     animation-direction: alternate;
+  }
+
+  .screen::after{
+    content: "";
+    background: rgba(18, 16, 16, 0.1);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    display: block;
+    opacity: 0;
+    animation: screen-flicker 1.5s infinite;
   }
 
   .scanlines {
@@ -258,6 +350,72 @@ input:-webkit-autofill {
     to{top: 93%;}
   }
 
+  @keyframes screen-flicker {
+    0% {
+      opacity: 0.28;
+    }
+    5% {
+      opacity: 0.35;
+    }
+    10% {
+      opacity: 0.24;
+    }
+    15% {
+      opacity: 0.91;
+    }
+    20% {
+      opacity: 0.18;
+    }
+    25% {
+      opacity: 0.84;
+    }
+    30% {
+      opacity: 0.66;
+    }
+    35% {
+      opacity: 0.68;
+    }
+    40% {
+      opacity: 0.27;
+    }
+    45% {
+      opacity: 0.85;
+    }
+    50% {
+      opacity: 0.96;
+    }
+    55% {
+      opacity: 0.09;
+    }
+    60% {
+      opacity: 0.20;
+    }
+    65% {
+      opacity: 0.72;
+    }
+    70% {
+      opacity: 0.53;
+    }
+    75% {
+      opacity: 0.37;
+    }
+    80% {
+      opacity: 0.71;
+    }
+    85% {
+      opacity: 0.70;
+    }
+    90% {
+      opacity: 0.70;
+    }
+    95% {
+      opacity: 0.36;
+    }
+    100% {
+      opacity: 0.24;
+    }
+  }
+
   @keyframes animated-text{
     from{width: 0;}
     to{width: 245px;}
@@ -322,6 +480,19 @@ input:-webkit-autofill {
     text-align: center;
     animation: glow 5s infinite;
     animation-direction: alternate;
+  }
+
+  .screen::after{
+    content: "";
+    background: rgba(18, 16, 16, 0.1);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    display: block;
+    opacity: 0;
+    animation: screen-flicker 1.5s infinite;
   }
 
   .scanlines {
@@ -400,6 +571,72 @@ input:-webkit-autofill {
     to{top: 93%;}
   }
 
+  @keyframes screen-flicker {
+    0% {
+      opacity: 0.28;
+    }
+    5% {
+      opacity: 0.35;
+    }
+    10% {
+      opacity: 0.24;
+    }
+    15% {
+      opacity: 0.91;
+    }
+    20% {
+      opacity: 0.18;
+    }
+    25% {
+      opacity: 0.84;
+    }
+    30% {
+      opacity: 0.66;
+    }
+    35% {
+      opacity: 0.68;
+    }
+    40% {
+      opacity: 0.27;
+    }
+    45% {
+      opacity: 0.85;
+    }
+    50% {
+      opacity: 0.96;
+    }
+    55% {
+      opacity: 0.09;
+    }
+    60% {
+      opacity: 0.20;
+    }
+    65% {
+      opacity: 0.72;
+    }
+    70% {
+      opacity: 0.53;
+    }
+    75% {
+      opacity: 0.37;
+    }
+    80% {
+      opacity: 0.71;
+    }
+    85% {
+      opacity: 0.70;
+    }
+    90% {
+      opacity: 0.70;
+    }
+    95% {
+      opacity: 0.36;
+    }
+    100% {
+      opacity: 0.24;
+    }
+  }
+
   @keyframes animated-text{
     from{width: 0;}
     to{width: 245px;}
@@ -464,6 +701,19 @@ input:-webkit-autofill {
     text-align: center;
     animation: glow 5s infinite;
     animation-direction: alternate;
+  }
+
+  .screen::after{
+    content: "";
+    background: rgba(18, 16, 16, 0.1);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    display: block;
+    opacity: 0;
+    animation: screen-flicker 1.5s infinite;
   }
 
   .scanlines {
@@ -542,6 +792,72 @@ input:-webkit-autofill {
     to{top: 93%;}
   }
 
+  @keyframes screen-flicker {
+    0% {
+      opacity: 0.28;
+    }
+    5% {
+      opacity: 0.35;
+    }
+    10% {
+      opacity: 0.24;
+    }
+    15% {
+      opacity: 0.91;
+    }
+    20% {
+      opacity: 0.18;
+    }
+    25% {
+      opacity: 0.84;
+    }
+    30% {
+      opacity: 0.66;
+    }
+    35% {
+      opacity: 0.68;
+    }
+    40% {
+      opacity: 0.27;
+    }
+    45% {
+      opacity: 0.85;
+    }
+    50% {
+      opacity: 0.96;
+    }
+    55% {
+      opacity: 0.09;
+    }
+    60% {
+      opacity: 0.20;
+    }
+    65% {
+      opacity: 0.72;
+    }
+    70% {
+      opacity: 0.53;
+    }
+    75% {
+      opacity: 0.37;
+    }
+    80% {
+      opacity: 0.71;
+    }
+    85% {
+      opacity: 0.70;
+    }
+    90% {
+      opacity: 0.70;
+    }
+    95% {
+      opacity: 0.36;
+    }
+    100% {
+      opacity: 0.24;
+    }
+  }
+
   @keyframes animated-text{
     from{width: 0;}
     to{width: 245px;}
@@ -607,6 +923,19 @@ input:-webkit-autofill {
     text-align: center;
     animation: glow 5s infinite;
     animation-direction: alternate;
+  }
+
+  .screen::after{
+    content: "";
+    background: rgba(18, 16, 16, 0.1);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    display: block;
+    opacity: 0;
+    animation: screen-flicker 1.5s infinite;
   }
 
   .scanlines {
@@ -683,6 +1012,72 @@ input:-webkit-autofill {
   @keyframes scanlines{
     from{top: 0;}
     to{top: 93%;}
+  }
+
+  @keyframes screen-flicker {
+    0% {
+      opacity: 0.28;
+    }
+    5% {
+      opacity: 0.35;
+    }
+    10% {
+      opacity: 0.24;
+    }
+    15% {
+      opacity: 0.91;
+    }
+    20% {
+      opacity: 0.18;
+    }
+    25% {
+      opacity: 0.84;
+    }
+    30% {
+      opacity: 0.66;
+    }
+    35% {
+      opacity: 0.68;
+    }
+    40% {
+      opacity: 0.27;
+    }
+    45% {
+      opacity: 0.85;
+    }
+    50% {
+      opacity: 0.96;
+    }
+    55% {
+      opacity: 0.09;
+    }
+    60% {
+      opacity: 0.20;
+    }
+    65% {
+      opacity: 0.72;
+    }
+    70% {
+      opacity: 0.53;
+    }
+    75% {
+      opacity: 0.37;
+    }
+    80% {
+      opacity: 0.71;
+    }
+    85% {
+      opacity: 0.70;
+    }
+    90% {
+      opacity: 0.70;
+    }
+    95% {
+      opacity: 0.36;
+    }
+    100% {
+      opacity: 0.24;
+    }
   }
 
   @keyframes animated-text{
