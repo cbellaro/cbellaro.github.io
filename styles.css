@@ -51,6 +51,7 @@
   position: absolute;
   display: block;
   opacity: 0;
+  z-index: 2;
   animation: screen-flicker 2s infinite;
 }
 
@@ -271,6 +272,7 @@ input:-webkit-autofill {
     position: absolute;
     display: block;
     opacity: 0;
+    z-index: 2;
     animation: screen-flicker 2s infinite;
   }
 
@@ -492,6 +494,7 @@ input:-webkit-autofill {
     position: absolute;
     display: block;
     opacity: 0;
+    z-index: 2;
     animation: screen-flicker 2s infinite;
   }
 
@@ -713,6 +716,7 @@ input:-webkit-autofill {
     position: absolute;
     display: block;
     opacity: 0;
+    z-index: 2;
     animation: screen-flicker 2s infinite;
   }
 
@@ -935,6 +939,7 @@ input:-webkit-autofill {
     position: absolute;
     display: block;
     opacity: 0;
+    z-index: 2;
     animation: screen-flicker 2s infinite;
   }
 
