@@ -35,7 +35,7 @@
   height: 90%;
   box-shadow: 0px 0px 5px 1px rgb(58, 140, 18);
   color: rgb(92, 217, 30);
-  font-size: 32px;
+  font-size: 20px;
   text-align: center;
   animation: glow 5s infinite;
   animation-direction: alternate;
@@ -98,7 +98,7 @@ form, input, input:focus{
   border-color: transparent;
   background-color: transparent;
   color: rgb(92, 217, 30);
-  font-size: 32px;
+  font-size: 20px;
   outline: none;
   width: 147px;
   caret-color: rgb(92, 217, 30);
