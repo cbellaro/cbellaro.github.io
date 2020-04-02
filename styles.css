@@ -1,0 +1,859 @@
+@font-face {
+   font-family: GlassTTYVT220;
+   src: local("Glass TTY VT220") local("Glass TTY VT220 Medium") url(http://waltergr.com/misc/Glass_TTY_VT220.ttf) format("truetype");
+ }
+
+*{
+    font-family: 'Glass_TTY_VT220';
+}
+
+.container{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top:0;
+  left:0;
+  background-color: rgb(166,179,164);
+}
+
+.monitor-background{
+  background-color: rgb(112,131,109);
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 97%;
+  height: 97%;
+  border-radius: 10px;
+}
+
+.screen{
+  background: radial-gradient(circle, rgb(22, 82, 49) 20%, rgb(0, 0, 0) 100%);
+  border: 6px solid black;
+  border-radius: 10px;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 90%;
+  box-shadow: 0px 0px 5px 1px rgb(58, 140, 18);
+  color: rgb(92, 217, 30);
+  font-size: 16px;
+  text-align: center;
+  animation: glow 5s infinite;
+  animation-direction: alternate;
+}
+
+.scanlines {
+  position: absolute;
+  height: 50px;
+  width: 100%;
+  background-color: green;
+  opacity: 0.1;
+  animation: scanlines 5s infinite;
+}
+
+.banner{
+  text-align: left;
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  justify-content: center;
+  font-size: 8px;
+}
+
+.command{
+  text-align: center;
+}
+
+.command-list ul{
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width: 100%;
+  text-align: center;
+}
+
+.command-list li, a:link, a:visited{
+  display: inline-block;
+  text-decoration: none;
+  color: rgb(92, 217, 30);
+}
+
+.input-form{
+  display: flex;
+}
+
+.input{
+  text-align: left;
+  display: inline-block;
+  margin-left: 5%;
+  width: 245px;
+  overflow: hidden;
+  border-right: 1px solid rgb(92, 217, 30);
+  white-space: nowrap;
+  animation: animated-text 4s steps(50, end),
+  animated-caret .75s step-end infinite;
+}
+
+form, input, input:focus{
+  display: inline-block;
+  border-color: transparent;
+  background-color: transparent;
+  color: rgb(92, 217, 30);
+  font-size: 16px;
+  outline: none;
+  width: 147px;
+  caret-color: rgb(92, 217, 30);
+  margin-left: -0.2%;
+  margin-top: -0.3%;
+}
+
+input:-webkit-autofill {
+    -webkit-animation-delay: 1s;
+    -webkit-animation-name: autofill;
+    -webkit-animation-fill-mode: both;
+}
+
+@keyframes scanlines{
+  from{top: 0;}
+  to{top: 93%;}
+}
+
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 245px;}
+}
+
+@keyframes animated-caret{
+  from, to { border-color: transparent }
+  50% { border-color: rgb(92, 217, 30) }
+}
+
+@keyframes glow{
+  0% {box-shadow: 0px 0px 5px 1px rgb(58, 140, 18);}
+  25% {box-shadow: 0px 0px 5px 2px rgb(58, 140, 18);}
+  50% {box-shadow: 0px 0px 5px 3px rgb(58, 140, 18);}
+  75% {box-shadow: 0px 0px 5px 4px rgb(58, 140, 18);}
+  100% {box-shadow: 0px 0px 5px 5px rgb(58, 140, 18);}
+}
+
+@-webkit-keyframes autofill {
+  0%,100% {
+    color: rgb(92, 217, 30);
+    background: transparent;
+  }
+}
+
+@media screen and (min-width: 580px){
+  .container{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:0;
+    left:0;
+    background-color: rgb(166,179,164);
+  }
+
+  .monitor-background{
+    background-color: rgb(112,131,109);
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 97%;
+    height: 97%;
+    border-radius: 10px;
+  }
+
+  .screen{
+    background: radial-gradient(circle, rgb(22, 82, 49) 20%, rgb(0, 0, 0) 100%);
+    border: 6px solid black;
+    border-radius: 10px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 90%;
+    box-shadow: 0px 0px 5px 1px rgb(58, 140, 18);
+    color: rgb(92, 217, 30);
+    font-size: 16px;
+    text-align: center;
+    animation: glow 5s infinite;
+    animation-direction: alternate;
+  }
+
+  .scanlines {
+    position: absolute;
+    height: 50px;
+    width: 100%;
+    background-color: green;
+    opacity: 0.1;
+    animation: scanlines 5s infinite;
+  }
+
+  .banner{
+    text-align: left;
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    justify-content: center;
+    font-size: 10px;
+  }
+
+  .command{
+    text-align: center;
+  }
+
+  .command-list ul{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+  }
+
+  .command-list li, a:link, a:visited{
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(92, 217, 30);
+  }
+
+  .input-form{
+    display: flex;
+  }
+
+  .input{
+    text-align: left;
+    display: inline-block;
+    margin-left: 5%;
+    width: 245px;
+    overflow: hidden;
+    border-right: 1px solid rgb(92, 217, 30);
+    white-space: nowrap;
+    animation: animated-text 4s steps(50, end),
+    animated-caret .75s step-end infinite;
+  }
+
+  form, input, input:focus{
+    display: inline-block;
+    border-color: transparent;
+    background-color: transparent;
+    color: rgb(92, 217, 30);
+    font-size: 16px;
+    outline: none;
+    width: 225px;
+    caret-color: rgb(92, 217, 30);
+    margin-left: -0.2%;
+    margin-top: -0.3%;
+  }
+
+  input:-webkit-autofill {
+      -webkit-animation-delay: 1s;
+      -webkit-animation-name: autofill;
+      -webkit-animation-fill-mode: both;
+  }
+
+  @keyframes scanlines{
+    from{top: 0;}
+    to{top: 93%;}
+  }
+
+  @keyframes animated-text{
+    from{width: 0;}
+    to{width: 245px;}
+  }
+
+  @keyframes animated-caret{
+    from, to { border-color: transparent }
+    50% { border-color: rgb(92, 217, 30) }
+  }
+
+  @keyframes glow{
+    0% {box-shadow: 0px 0px 5px 1px rgb(58, 140, 18);}
+    25% {box-shadow: 0px 0px 5px 2px rgb(58, 140, 18);}
+    50% {box-shadow: 0px 0px 5px 3px rgb(58, 140, 18);}
+    75% {box-shadow: 0px 0px 5px 4px rgb(58, 140, 18);}
+    100% {box-shadow: 0px 0px 5px 5px rgb(58, 140, 18);}
+  }
+
+  @-webkit-keyframes autofill {
+    0%,100% {
+      color: rgb(92, 217, 30);
+      background: transparent;
+    }
+  }
+}
+
+@media screen and (min-width: 700px){
+  .container{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:0;
+    left:0;
+    background-color: rgb(166,179,164);
+  }
+
+  .monitor-background{
+    background-color: rgb(112,131,109);
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 97%;
+    height: 97%;
+    border-radius: 10px;
+  }
+
+  .screen{
+    background: radial-gradient(circle, rgb(22, 82, 49) 20%, rgb(0, 0, 0) 100%);
+    border: 6px solid black;
+    border-radius: 10px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 90%;
+    box-shadow: 0px 0px 5px 1px rgb(58, 140, 18);
+    color: rgb(92, 217, 30);
+    font-size: 16px;
+    text-align: center;
+    animation: glow 5s infinite;
+    animation-direction: alternate;
+  }
+
+  .scanlines {
+    position: absolute;
+    height: 50px;
+    width: 100%;
+    background-color: green;
+    opacity: 0.1;
+    animation: scanlines 5s infinite;
+  }
+
+  .banner{
+    text-align: left;
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    justify-content: center;
+    font-size: 12px;
+  }
+
+  .command{
+    text-align: center;
+  }
+
+  .command-list ul{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+  }
+
+  .command-list li, a:link, a:visited{
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(92, 217, 30);
+  }
+
+  .input-form{
+    display: flex;
+  }
+
+  .input{
+    text-align: left;
+    display: inline-block;
+    margin-left: 5%;
+    width: 245px;
+    overflow: hidden;
+    border-right: 1px solid rgb(92, 217, 30);
+    white-space: nowrap;
+    animation: animated-text 4s steps(50, end),
+    animated-caret .75s step-end infinite;
+  }
+
+  form, input, input:focus{
+    display: inline-block;
+    border-color: transparent;
+    background-color: transparent;
+    color: rgb(92, 217, 30);
+    font-size: 16px;
+    outline: none;
+    width: 345px;
+    caret-color: rgb(92, 217, 30);
+    margin-left: -0.2%;
+    margin-top: -0.3%;
+  }
+
+  input:-webkit-autofill {
+      -webkit-animation-delay: 1s;
+      -webkit-animation-name: autofill;
+      -webkit-animation-fill-mode: both;
+  }
+
+  @keyframes scanlines{
+    from{top: 0;}
+    to{top: 93%;}
+  }
+
+  @keyframes animated-text{
+    from{width: 0;}
+    to{width: 245px;}
+  }
+
+  @keyframes animated-caret{
+    from, to { border-color: transparent }
+    50% { border-color: rgb(92, 217, 30) }
+  }
+
+  @keyframes glow{
+    0% {box-shadow: 0px 0px 5px 1px rgb(58, 140, 18);}
+    25% {box-shadow: 0px 0px 5px 2px rgb(58, 140, 18);}
+    50% {box-shadow: 0px 0px 5px 3px rgb(58, 140, 18);}
+    75% {box-shadow: 0px 0px 5px 4px rgb(58, 140, 18);}
+    100% {box-shadow: 0px 0px 5px 5px rgb(58, 140, 18);}
+  }
+
+  @-webkit-keyframes autofill {
+    0%,100% {
+      color: rgb(92, 217, 30);
+      background: transparent;
+    }
+  }
+}
+
+@media screen and (min-width: 780px){
+  .container{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:0;
+    left:0;
+    background-color: rgb(166,179,164);
+  }
+
+  .monitor-background{
+    background-color: rgb(112,131,109);
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 97%;
+    height: 97%;
+    border-radius: 10px;
+  }
+
+  .screen{
+    background: radial-gradient(circle, rgb(22, 82, 49) 20%, rgb(0, 0, 0) 100%);
+    border: 6px solid black;
+    border-radius: 10px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 90%;
+    box-shadow: 0px 0px 5px 1px rgb(58, 140, 18);
+    color: rgb(92, 217, 30);
+    font-size: 16px;
+    text-align: center;
+    animation: glow 5s infinite;
+    animation-direction: alternate;
+  }
+
+  .scanlines {
+    position: absolute;
+    height: 50px;
+    width: 100%;
+    background-color: green;
+    opacity: 0.1;
+    animation: scanlines 5s infinite;
+  }
+
+  .banner{
+    text-align: left;
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    justify-content: center;
+    font-size: 14px;
+  }
+
+  .command{
+    text-align: center;
+  }
+
+  .command-list ul{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+  }
+
+  .command-list li, a:link, a:visited{
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(92, 217, 30);
+  }
+
+  .input-form{
+    display: flex;
+  }
+
+  .input{
+    text-align: left;
+    display: inline-block;
+    margin-left: 5%;
+    width: 245px;
+    overflow: hidden;
+    border-right: 1px solid rgb(92, 217, 30);
+    white-space: nowrap;
+    animation: animated-text 4s steps(50, end),
+    animated-caret .75s step-end infinite;
+  }
+
+  form, input, input:focus{
+    display: inline-block;
+    border-color: transparent;
+    background-color: transparent;
+    color: rgb(92, 217, 30);
+    font-size: 16px;
+    outline: none;
+    width: 300px;
+    caret-color: rgb(92, 217, 30);
+    margin-left: -0.2%;
+    margin-top: -0.3%;
+  }
+
+  input:-webkit-autofill {
+      -webkit-animation-delay: 1s;
+      -webkit-animation-name: autofill;
+      -webkit-animation-fill-mode: both;
+  }
+
+  @keyframes scanlines{
+    from{top: 0;}
+    to{top: 93%;}
+  }
+
+  @keyframes animated-text{
+    from{width: 0;}
+    to{width: 245px;}
+  }
+
+  @keyframes animated-caret{
+    from, to { border-color: transparent }
+    50% { border-color: rgb(92, 217, 30) }
+  }
+
+  @keyframes glow{
+    0% {box-shadow: 0px 0px 5px 1px rgb(58, 140, 18);}
+    25% {box-shadow: 0px 0px 5px 2px rgb(58, 140, 18);}
+    50% {box-shadow: 0px 0px 5px 3px rgb(58, 140, 18);}
+    75% {box-shadow: 0px 0px 5px 4px rgb(58, 140, 18);}
+    100% {box-shadow: 0px 0px 5px 5px rgb(58, 140, 18);}
+  }
+
+  @-webkit-keyframes autofill {
+    0%,100% {
+      color: rgb(92, 217, 30);
+      background: transparent;
+    }
+  }
+}
+
+@media screen and (min-width: 850px){
+  .container{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:0;
+    left:0;
+    background-color: rgb(166,179,164);
+  }
+
+  .monitor-background{
+    background-color: rgb(112,131,109);
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 97%;
+    height: 97%;
+    border-radius: 10px;
+  }
+
+  .screen{
+    background: radial-gradient(circle, rgb(22, 82, 49) 20%, rgb(0, 0, 0) 100%);
+    border: 6px solid black;
+    border-radius: 10px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 90%;
+    box-shadow: 0px 0px 5px 1px rgb(58, 140, 18);
+    color: rgb(92, 217, 30);
+    font-size: 16px;
+    text-align: center;
+    animation: glow 5s infinite;
+    animation-direction: alternate;
+  }
+
+  .scanlines {
+    position: absolute;
+    height: 50px;
+    width: 100%;
+    background-color: green;
+    opacity: 0.1;
+    animation: scanlines 5s infinite;
+  }
+
+  .banner{
+    text-align: left;
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    justify-content: center;
+    font-size: 15px;
+  }
+
+  .command{
+    text-align: center;
+  }
+
+  .command-list ul{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+  }
+
+  .command-list li, a:link, a:visited{
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(92, 217, 30);
+  }
+
+  .input-form{
+    display: flex;
+  }
+
+  .input{
+    text-align: left;
+    display: inline-block;
+    margin-left: 5%;
+    width: 245px;
+    overflow: hidden;
+    border-right: 1px solid rgb(92, 217, 30);
+    white-space: nowrap;
+    animation: animated-text 4s steps(50, end),
+    animated-caret .75s step-end infinite;
+  }
+
+  form, input, input:focus{
+    display: inline-block;
+    border-color: transparent;
+    background-color: transparent;
+    color: rgb(92, 217, 30);
+    font-size: 16px;
+    outline: none;
+    width: 300px;
+    caret-color: rgb(92, 217, 30);
+    margin-left: -0.2%;
+    margin-top: -0.3%;
+  }
+
+  input:-webkit-autofill {
+      -webkit-animation-delay: 1s;
+      -webkit-animation-name: autofill;
+      -webkit-animation-fill-mode: both;
+  }
+
+  @keyframes scanlines{
+    from{top: 0;}
+    to{top: 93%;}
+  }
+
+  @keyframes animated-text{
+    from{width: 0;}
+    to{width: 245px;}
+  }
+
+  @keyframes animated-caret{
+    from, to { border-color: transparent }
+    50% { border-color: rgb(92, 217, 30) }
+  }
+
+  @keyframes glow{
+    0% {box-shadow: 0px 0px 5px 1px rgb(58, 140, 18);}
+    25% {box-shadow: 0px 0px 5px 2px rgb(58, 140, 18);}
+    50% {box-shadow: 0px 0px 5px 3px rgb(58, 140, 18);}
+    75% {box-shadow: 0px 0px 5px 4px rgb(58, 140, 18);}
+    100% {box-shadow: 0px 0px 5px 5px rgb(58, 140, 18);}
+  }
+
+  @-webkit-keyframes autofill {
+    0%,100% {
+      color: rgb(92, 217, 30);
+      background: transparent;
+    }
+  }
+}
+
+@media screen and (min-width: 900px){
+
+  .container{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:0;
+    left:0;
+    background-color: rgb(166,179,164);
+  }
+
+  .monitor-background{
+    background-color: rgb(112,131,109);
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 97%;
+    height: 97%;
+    border-radius: 10px;
+  }
+
+  .screen{
+    background: radial-gradient(circle, rgb(22, 82, 49) 20%, rgb(0, 0, 0) 100%);
+    border: 6px solid black;
+    border-radius: 10px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 90%;
+    box-shadow: 0px 0px 5px 1px rgb(58, 140, 18);
+    color: rgb(92, 217, 30);
+    font-size: 16px;
+    text-align: center;
+    animation: glow 5s infinite;
+    animation-direction: alternate;
+  }
+
+  .scanlines {
+    position: absolute;
+    height: 50px;
+    width: 100%;
+    background-color: green;
+    opacity: 0.1;
+    animation: scanlines 5s infinite;
+  }
+
+  .banner{
+    text-align: left;
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    justify-content: center;
+    font-size: 16px;
+  }
+
+  .command{
+    text-align: center;
+  }
+
+  .command-list ul{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+  }
+
+  .command-list li, a:link, a:visited{
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(92, 217, 30);
+  }
+
+  .input-form{
+    display: flex;
+  }
+
+  .input{
+    text-align: left;
+    display: inline-block;
+    margin-left: 5%;
+    width: 245px;
+    overflow: hidden;
+    border-right: 1px solid rgb(92, 217, 30);
+    white-space: nowrap;
+    animation: animated-text 4s steps(50, end),
+    animated-caret .75s step-end infinite;
+  }
+
+  form, input, input:focus{
+    display: inline-block;
+    border-color: transparent;
+    background-color: transparent;
+    color: rgb(92, 217, 30);
+    font-size: 16px;
+    outline: none;
+    width: 540px;
+    caret-color: rgb(92, 217, 30);
+    margin-left: -0.2%;
+    margin-top: -0.3%;
+  }
+
+  input:-webkit-autofill {
+      -webkit-animation-delay: 1s;
+      -webkit-animation-name: autofill;
+      -webkit-animation-fill-mode: both;
+  }
+
+  @keyframes scanlines{
+    from{top: 0;}
+    to{top: 93%;}
+  }
+
+  @keyframes animated-text{
+    from{width: 0;}
+    to{width: 245px;}
+  }
+
+  @keyframes animated-caret{
+    from, to { border-color: transparent }
+    50% { border-color: rgb(92, 217, 30) }
+  }
+
+  @keyframes glow{
+    0% {box-shadow: 0px 0px 5px 1px rgb(58, 140, 18);}
+    25% {box-shadow: 0px 0px 5px 2px rgb(58, 140, 18);}
+    50% {box-shadow: 0px 0px 5px 3px rgb(58, 140, 18);}
+    75% {box-shadow: 0px 0px 5px 4px rgb(58, 140, 18);}
+    100% {box-shadow: 0px 0px 5px 5px rgb(58, 140, 18);}
+  }
+
+  @-webkit-keyframes autofill {
+    0%,100% {
+      color: rgb(92, 217, 30);
+      background: transparent;
+    }
+  }
+}
