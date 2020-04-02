@@ -51,7 +51,7 @@
   position: absolute;
   display: block;
   opacity: 0;
-  animation: screen-flicker 1.5s infinite;
+  animation: screen-flicker 2s infinite;
 }
 
 .scanlines {
@@ -271,7 +271,7 @@ input:-webkit-autofill {
     position: absolute;
     display: block;
     opacity: 0;
-    animation: screen-flicker 1.5s infinite;
+    animation: screen-flicker 2s infinite;
   }
 
   .scanlines {
@@ -492,7 +492,7 @@ input:-webkit-autofill {
     position: absolute;
     display: block;
     opacity: 0;
-    animation: screen-flicker 1.5s infinite;
+    animation: screen-flicker 2s infinite;
   }
 
   .scanlines {
@@ -713,7 +713,7 @@ input:-webkit-autofill {
     position: absolute;
     display: block;
     opacity: 0;
-    animation: screen-flicker 1.5s infinite;
+    animation: screen-flicker 2s infinite;
   }
 
   .scanlines {
@@ -935,7 +935,7 @@ input:-webkit-autofill {
     position: absolute;
     display: block;
     opacity: 0;
-    animation: screen-flicker 1.5s infinite;
+    animation: screen-flicker 2s infinite;
   }
 
   .scanlines {
