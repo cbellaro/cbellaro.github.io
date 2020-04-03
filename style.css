@@ -65,13 +65,10 @@
 }
 
 .banner{
-  margin-top: -2%;
   text-align: left;
   display: flex;
-  overflow: hidden;
-  white-space: nowrap;
   justify-content: center;
-  font-size: 5px;
+  font-size: 3px;
   color: rgb(154, 255, 120);
 }
 
@@ -85,6 +82,7 @@
   margin-top: -2%;
   margin-left: 5%;
   margin-right: 5%;
+  font-size: 20px;
 }
 
 .command-list ul{
@@ -103,7 +101,7 @@
   border-radius: 5px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: -8%;
+  margin-top: -15%;
 }
 
 .terminal-text{
@@ -262,7 +260,7 @@
     text-align: left;
     display: flex;
     justify-content: center;
-    font-size: 5px;
+    font-size: 3px;
     color: rgb(154, 255, 120);
   }
 
@@ -276,6 +274,7 @@
     margin-top: -2%;
     margin-left: 5%;
     margin-right: 5%;
+    font-size: 19px;
   }
 
   .command-list ul{
@@ -294,6 +293,7 @@
     border-radius: 5px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: -8%;
   }
 
   .terminal-text{
@@ -453,7 +453,7 @@
     text-align: left;
     display: flex;
     justify-content: center;
-    font-size: 5px;
+    font-size: 3px;
     color: rgb(154, 255, 120);
   }
 
@@ -467,6 +467,7 @@
     margin-top: -2%;
     margin-left: 5%;
     margin-right: 5%;
+    font-size: 20px;
   }
 
   .command-list ul{
@@ -485,7 +486,7 @@
     border-radius: 5px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 1%;
+    margin-top: -8%;
   }
 
   .terminal-text{
@@ -604,7 +605,7 @@
     border: 6px solid black;
     border-radius: 10px;
     margin: 0;
-    position: absolute;
+    position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -645,7 +646,7 @@
     text-align: left;
     display: flex;
     justify-content: center;
-    font-size: 5px;
+    font-size: 3px;
     color: rgb(154, 255, 120);
   }
 
@@ -659,6 +660,7 @@
     margin-top: -2%;
     margin-left: 5%;
     margin-right: 5%;
+    font-size: 20px;
   }
 
   .command-list ul{
@@ -677,7 +679,7 @@
     border-radius: 5px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 8%;
+    margin-top: 2%;
   }
 
   .terminal-text{
