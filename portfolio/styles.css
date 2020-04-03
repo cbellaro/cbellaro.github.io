@@ -3,13 +3,13 @@
 }
 
 .container{
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top:0;
-    left:0;
-    background-color: rgb(166,179,164);
-  }
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top:0;
+  left:0;
+  background-color: rgb(166,179,164);
+}
 
 .monitor-background{
   background-color: rgb(112,131,109);
@@ -65,26 +65,16 @@
 }
 
 .banner{
-  margin-top: -2%;
   text-align: left;
   display: flex;
   overflow: hidden;
   white-space: nowrap;
   justify-content: center;
-  font-size: 5px;
-  color: rgb(154, 255, 120);
+  font-size: 12px;
 }
 
-.title{
-  margin-top: 1%;
-  margin-bottom: 1%;
-}
-
-.bio{
+.command{
   text-align: center;
-  margin-top: -2%;
-  margin-left: 5%;
-  margin-right: 5%;
 }
 
 .command-list ul{
@@ -95,25 +85,45 @@
   text-align: center;
 }
 
-.terminal-icon{
-  font-size: 28px;
-  border: 2px solid rgb(92, 217, 30);
-  width: 30px;
-  height: 30px;
-  border-radius: 5px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: -8%;
-}
-
-.terminal-text{
-  margin-top: 3%;
-}
-
 .command-list li, a:link, a:visited{
   display: inline-block;
   text-decoration: none;
   color: rgb(92, 217, 30);
+}
+
+.input-form{
+  display: flex;
+}
+
+.input{
+  text-align: left;
+  display: inline-block;
+  margin-left: 5%;
+  width: 245px;
+  overflow: hidden;
+  border-right: 1px solid rgb(92, 217, 30);
+  white-space: nowrap;
+  animation: animated-text 4s steps(50, end),
+  animated-caret .75s step-end infinite;
+}
+
+form, input, input:focus{
+  display: inline-block;
+  border-color: transparent;
+  background-color: transparent;
+  color: rgb(92, 217, 30);
+  font-size: 20px;
+  outline: none;
+  width: 147px;
+  caret-color: rgb(92, 217, 30);
+  margin-left: -0.2%;
+  margin-top: -0.3%;
+}
+
+input:-webkit-autofill {
+    -webkit-animation-delay: 1s;
+    -webkit-animation-name: autofill;
+    -webkit-animation-fill-mode: both;
 }
 
 @keyframes scanlines{
@@ -187,6 +197,16 @@
   }
 }
 
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 245px;}
+}
+
+@keyframes animated-caret{
+  from, to { border-color: transparent }
+  50% { border-color: rgb(92, 217, 30) }
+}
+
 @keyframes glow{
   0% {box-shadow: 0px 0px 5px 1px rgb(58, 140, 18);}
   25% {box-shadow: 0px 0px 5px 2px rgb(58, 140, 18);}
@@ -195,206 +215,22 @@
   100% {box-shadow: 0px 0px 5px 5px rgb(58, 140, 18);}
 }
 
-@media screen and (min-width: 592px){
-  .container{
-      width: 100%;
-      height: 100%;
-      position: fixed;
-      top:0;
-      left:0;
-      background-color: rgb(166,179,164);
-    }
-
-  .monitor-background{
-    background-color: rgb(112,131,109);
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 97%;
-    height: 97%;
-    border-radius: 10px;
-  }
-
-  .screen{
-    background: radial-gradient(circle, rgb(22, 82, 49) 20%, rgb(0, 0, 0) 100%);
-    border: 6px solid black;
-    border-radius: 10px;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%;
-    height: 90%;
-    box-shadow: 0px 0px 5px 1px rgb(58, 140, 18);
+@-webkit-keyframes autofill {
+  0%,100% {
     color: rgb(92, 217, 30);
-    font-size: 20px;
-    text-align: center;
-    animation: glow 5s infinite;
-    animation-direction: alternate;
-  }
-
-  .screen::after{
-    content: "";
-    background: rgba(18, 16, 16, 0.1);
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    display: block;
-    opacity: 0;
-    z-index: -2;
-    animation: screen-flicker 2s infinite;
-  }
-
-  .scanlines {
-    position: absolute;
-    height: 50px;
-    width: 100%;
-    background-color: green;
-    opacity: 0.1;
-    animation: scanlines 5s infinite;
-  }
-
-  .banner{
-    text-align: left;
-    display: flex;
-    justify-content: center;
-    font-size: 5px;
-    color: rgb(154, 255, 120);
-  }
-
-  .title{
-    margin-top: 1%;
-    margin-bottom: 1%;
-  }
-
-  .bio{
-    text-align: center;
-    margin-top: -2%;
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-
-  .command-list ul{
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    width: 100%;
-    text-align: center;
-  }
-
-  .terminal-icon{
-    font-size: 40px;
-    border: 2px solid rgb(92, 217, 30);
-    width: 45px;
-    height: 45px;
-    border-radius: 5px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .terminal-text{
-    margin-top: 3%;
-  }
-
-  .command-list li, a:link, a:visited{
-    display: inline-block;
-    text-decoration: none;
-    color: rgb(92, 217, 30);
-  }
-
-  @keyframes scanlines{
-    from{top: 0;}
-    to{top: 93%;}
-  }
-
-  @keyframes screen-flicker {
-    0% {
-      opacity: 0.28;
-    }
-    5% {
-      opacity: 0.35;
-    }
-    10% {
-      opacity: 0.24;
-    }
-    15% {
-      opacity: 0.91;
-    }
-    20% {
-      opacity: 0.18;
-    }
-    25% {
-      opacity: 0.84;
-    }
-    30% {
-      opacity: 0.66;
-    }
-    35% {
-      opacity: 0.68;
-    }
-    40% {
-      opacity: 0.27;
-    }
-    45% {
-      opacity: 0.85;
-    }
-    50% {
-      opacity: 0.96;
-    }
-    55% {
-      opacity: 0.09;
-    }
-    60% {
-      opacity: 0.20;
-    }
-    65% {
-      opacity: 0.72;
-    }
-    70% {
-      opacity: 0.53;
-    }
-    75% {
-      opacity: 0.37;
-    }
-    80% {
-      opacity: 0.71;
-    }
-    85% {
-      opacity: 0.70;
-    }
-    90% {
-      opacity: 0.70;
-    }
-    95% {
-      opacity: 0.36;
-    }
-    100% {
-      opacity: 0.24;
-    }
-  }
-
-  @keyframes glow{
-    0% {box-shadow: 0px 0px 5px 1px rgb(58, 140, 18);}
-    25% {box-shadow: 0px 0px 5px 2px rgb(58, 140, 18);}
-    50% {box-shadow: 0px 0px 5px 3px rgb(58, 140, 18);}
-    75% {box-shadow: 0px 0px 5px 4px rgb(58, 140, 18);}
-    100% {box-shadow: 0px 0px 5px 5px rgb(58, 140, 18);}
+    background: transparent;
   }
 }
 
-@media screen and (min-width: 662px){
+@media screen and (min-width: 525px){
   .container{
-      width: 100%;
-      height: 100%;
-      position: fixed;
-      top:0;
-      left:0;
-      background-color: rgb(166,179,164);
-    }
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:0;
+    left:0;
+    background-color: rgb(166,179,164);
+  }
 
   .monitor-background{
     background-color: rgb(112,131,109);
@@ -452,21 +288,14 @@
   .banner{
     text-align: left;
     display: flex;
+    overflow: hidden;
+    white-space: nowrap;
     justify-content: center;
-    font-size: 5px;
-    color: rgb(154, 255, 120);
+    font-size: 14px;
   }
 
-  .title{
-    margin-top: 1%;
-    margin-bottom: 1%;
-  }
-
-  .bio{
+  .command{
     text-align: center;
-    margin-top: -2%;
-    margin-left: 5%;
-    margin-right: 5%;
   }
 
   .command-list ul{
@@ -477,25 +306,45 @@
     text-align: center;
   }
 
-  .terminal-icon{
-    font-size: 48px;
-    border: 2px solid rgb(92, 217, 30);
-    width: 50px;
-    height: 50px;
-    border-radius: 5px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1%;
-  }
-
-  .terminal-text{
-    margin-top: 3%;
-  }
-
   .command-list li, a:link, a:visited{
     display: inline-block;
     text-decoration: none;
     color: rgb(92, 217, 30);
+  }
+
+  .input-form{
+    display: flex;
+  }
+
+  .input{
+    text-align: left;
+    display: inline-block;
+    margin-left: 5%;
+    width: 245px;
+    overflow: hidden;
+    border-right: 1px solid rgb(92, 217, 30);
+    white-space: nowrap;
+    animation: animated-text 4s steps(50, end),
+    animated-caret .75s step-end infinite;
+  }
+
+  form, input, input:focus{
+    display: inline-block;
+    border-color: transparent;
+    background-color: transparent;
+    color: rgb(92, 217, 30);
+    font-size: 20px;
+    outline: none;
+    width: 200px;
+    caret-color: rgb(92, 217, 30);
+    margin-left: -0.2%;
+    margin-top: -0.3%;
+  }
+
+  input:-webkit-autofill {
+      -webkit-animation-delay: 1s;
+      -webkit-animation-name: autofill;
+      -webkit-animation-fill-mode: both;
   }
 
   @keyframes scanlines{
@@ -569,24 +418,41 @@
     }
   }
 
+  @keyframes animated-text{
+    from{width: 0;}
+    to{width: 245px;}
+  }
+
+  @keyframes animated-caret{
+    from, to { border-color: transparent }
+    50% { border-color: rgb(92, 217, 30) }
+  }
+
   @keyframes glow{
     0% {box-shadow: 0px 0px 5px 1px rgb(58, 140, 18);}
     25% {box-shadow: 0px 0px 5px 2px rgb(58, 140, 18);}
     50% {box-shadow: 0px 0px 5px 3px rgb(58, 140, 18);}
     75% {box-shadow: 0px 0px 5px 4px rgb(58, 140, 18);}
     100% {box-shadow: 0px 0px 5px 5px rgb(58, 140, 18);}
+  }
+
+  @-webkit-keyframes autofill {
+    0%,100% {
+      color: rgb(92, 217, 30);
+      background: transparent;
+    }
   }
 }
 
-@media screen and (min-width: 835px){
+@media screen and (min-width: 600px){
   .container{
-      width: 100%;
-      height: 100%;
-      position: fixed;
-      top:0;
-      left:0;
-      background-color: rgb(166,179,164);
-    }
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:0;
+    left:0;
+    background-color: rgb(166,179,164);
+  }
 
   .monitor-background{
     background-color: rgb(112,131,109);
@@ -644,21 +510,14 @@
   .banner{
     text-align: left;
     display: flex;
+    overflow: hidden;
+    white-space: nowrap;
     justify-content: center;
-    font-size: 5px;
-    color: rgb(154, 255, 120);
+    font-size: 16px;
   }
 
-  .title{
-    margin-top: 1%;
-    margin-bottom: 1%;
-  }
-
-  .bio{
+  .command{
     text-align: center;
-    margin-top: -2%;
-    margin-left: 5%;
-    margin-right: 5%;
   }
 
   .command-list ul{
@@ -669,25 +528,45 @@
     text-align: center;
   }
 
-  .terminal-icon{
-    font-size: 58px;
-    border: 2px solid rgb(92, 217, 30);
-    width: 60px;
-    height: 60px;
-    border-radius: 5px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 8%;
-  }
-
-  .terminal-text{
-    margin-top: 3%;
-  }
-
   .command-list li, a:link, a:visited{
     display: inline-block;
     text-decoration: none;
     color: rgb(92, 217, 30);
+  }
+
+  .input-form{
+    display: flex;
+  }
+
+  .input{
+    text-align: left;
+    display: inline-block;
+    margin-left: 5%;
+    width: 245px;
+    overflow: hidden;
+    border-right: 1px solid rgb(92, 217, 30);
+    white-space: nowrap;
+    animation: animated-text 4s steps(50, end),
+    animated-caret .75s step-end infinite;
+  }
+
+  form, input, input:focus{
+    display: inline-block;
+    border-color: transparent;
+    background-color: transparent;
+    color: rgb(92, 217, 30);
+    font-size: 20px;
+    outline: none;
+    width: 200px;
+    caret-color: rgb(92, 217, 30);
+    margin-left: -0.2%;
+    margin-top: -0.3%;
+  }
+
+  input:-webkit-autofill {
+      -webkit-animation-delay: 1s;
+      -webkit-animation-name: autofill;
+      -webkit-animation-fill-mode: both;
   }
 
   @keyframes scanlines{
@@ -761,11 +640,473 @@
     }
   }
 
+  @keyframes animated-text{
+    from{width: 0;}
+    to{width: 245px;}
+  }
+
+  @keyframes animated-caret{
+    from, to { border-color: transparent }
+    50% { border-color: rgb(92, 217, 30) }
+  }
+
   @keyframes glow{
     0% {box-shadow: 0px 0px 5px 1px rgb(58, 140, 18);}
     25% {box-shadow: 0px 0px 5px 2px rgb(58, 140, 18);}
     50% {box-shadow: 0px 0px 5px 3px rgb(58, 140, 18);}
     75% {box-shadow: 0px 0px 5px 4px rgb(58, 140, 18);}
     100% {box-shadow: 0px 0px 5px 5px rgb(58, 140, 18);}
+  }
+
+  @-webkit-keyframes autofill {
+    0%,100% {
+      color: rgb(92, 217, 30);
+      background: transparent;
+    }
+  }
+}
+
+@media screen and (min-width: 700px){
+  .container{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:0;
+    left:0;
+    background-color: rgb(166,179,164);
+  }
+
+  .monitor-background{
+    background-color: rgb(112,131,109);
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 97%;
+    height: 97%;
+    border-radius: 10px;
+  }
+
+  .screen{
+    background: radial-gradient(circle, rgb(22, 82, 49) 20%, rgb(0, 0, 0) 100%);
+    border: 6px solid black;
+    border-radius: 10px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 90%;
+    box-shadow: 0px 0px 5px 1px rgb(58, 140, 18);
+    color: rgb(92, 217, 30);
+    font-size: 20px;
+    text-align: center;
+    animation: glow 5s infinite;
+    animation-direction: alternate;
+  }
+
+  .screen::after{
+    content: "";
+    background: rgba(18, 16, 16, 0.1);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    display: block;
+    opacity: 0;
+    z-index: -2;
+    animation: screen-flicker 2s infinite;
+  }
+
+  .scanlines {
+    position: absolute;
+    height: 50px;
+    width: 100%;
+    background-color: green;
+    opacity: 0.1;
+    animation: scanlines 5s infinite;
+  }
+
+  .banner{
+    text-align: left;
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    justify-content: center;
+    font-size: 18px;
+  }
+
+  .command{
+    text-align: center;
+  }
+
+  .command-list ul{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+  }
+
+  .command-list li, a:link, a:visited{
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(92, 217, 30);
+  }
+
+  .input-form{
+    display: flex;
+  }
+
+  .input{
+    text-align: left;
+    display: inline-block;
+    margin-left: 5%;
+    width: 245px;
+    overflow: hidden;
+    border-right: 1px solid rgb(92, 217, 30);
+    white-space: nowrap;
+    animation: animated-text 4s steps(50, end),
+    animated-caret .75s step-end infinite;
+  }
+
+  form, input, input:focus{
+    display: inline-block;
+    border-color: transparent;
+    background-color: transparent;
+    color: rgb(92, 217, 30);
+    font-size: 20px;
+    outline: none;
+    width: 300px;
+    caret-color: rgb(92, 217, 30);
+    margin-left: -0.2%;
+    margin-top: -0.3%;
+  }
+
+  input:-webkit-autofill {
+      -webkit-animation-delay: 1s;
+      -webkit-animation-name: autofill;
+      -webkit-animation-fill-mode: both;
+  }
+
+  @keyframes scanlines{
+    from{top: 0;}
+    to{top: 93%;}
+  }
+
+  @keyframes screen-flicker {
+    0% {
+      opacity: 0.28;
+    }
+    5% {
+      opacity: 0.35;
+    }
+    10% {
+      opacity: 0.24;
+    }
+    15% {
+      opacity: 0.91;
+    }
+    20% {
+      opacity: 0.18;
+    }
+    25% {
+      opacity: 0.84;
+    }
+    30% {
+      opacity: 0.66;
+    }
+    35% {
+      opacity: 0.68;
+    }
+    40% {
+      opacity: 0.27;
+    }
+    45% {
+      opacity: 0.85;
+    }
+    50% {
+      opacity: 0.96;
+    }
+    55% {
+      opacity: 0.09;
+    }
+    60% {
+      opacity: 0.20;
+    }
+    65% {
+      opacity: 0.72;
+    }
+    70% {
+      opacity: 0.53;
+    }
+    75% {
+      opacity: 0.37;
+    }
+    80% {
+      opacity: 0.71;
+    }
+    85% {
+      opacity: 0.70;
+    }
+    90% {
+      opacity: 0.70;
+    }
+    95% {
+      opacity: 0.36;
+    }
+    100% {
+      opacity: 0.24;
+    }
+  }
+
+  @keyframes animated-text{
+    from{width: 0;}
+    to{width: 245px;}
+  }
+
+  @keyframes animated-caret{
+    from, to { border-color: transparent }
+    50% { border-color: rgb(92, 217, 30) }
+  }
+
+  @keyframes glow{
+    0% {box-shadow: 0px 0px 5px 1px rgb(58, 140, 18);}
+    25% {box-shadow: 0px 0px 5px 2px rgb(58, 140, 18);}
+    50% {box-shadow: 0px 0px 5px 3px rgb(58, 140, 18);}
+    75% {box-shadow: 0px 0px 5px 4px rgb(58, 140, 18);}
+    100% {box-shadow: 0px 0px 5px 5px rgb(58, 140, 18);}
+  }
+
+  @-webkit-keyframes autofill {
+    0%,100% {
+      color: rgb(92, 217, 30);
+      background: transparent;
+    }
+  }
+}
+
+@media screen and (min-width: 800px){
+
+  .container{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:0;
+    left:0;
+    background-color: rgb(166,179,164);
+  }
+
+  .monitor-background{
+    background-color: rgb(112,131,109);
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 97%;
+    height: 97%;
+    border-radius: 10px;
+  }
+
+  .screen{
+    background: radial-gradient(circle, rgb(22, 82, 49) 20%, rgb(0, 0, 0) 100%);
+    border: 6px solid black;
+    border-radius: 10px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 90%;
+    box-shadow: 0px 0px 5px 1px rgb(58, 140, 18);
+    color: rgb(92, 217, 30);
+    font-size: 20px;
+    text-align: center;
+    animation: glow 5s infinite;
+    animation-direction: alternate;
+  }
+
+  .screen::after{
+    content: "";
+    background: rgba(18, 16, 16, 0.1);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    display: block;
+    opacity: 0;
+    z-index: -2;
+    animation: screen-flicker 2s infinite;
+  }
+
+  .scanlines {
+    position: absolute;
+    height: 50px;
+    width: 100%;
+    background-color: green;
+    opacity: 0.1;
+    animation: scanlines 5s infinite;
+  }
+
+  .banner{
+    text-align: left;
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    justify-content: center;
+    font-size: 20px;
+  }
+
+  .command{
+    text-align: center;
+  }
+
+  .command-list ul{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+  }
+
+  .command-list li, a:link, a:visited{
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(92, 217, 30);
+  }
+
+  .input-form{
+    display: flex;
+  }
+
+  .input{
+    text-align: left;
+    display: inline-block;
+    margin-left: 5%;
+    width: 250px;
+    overflow: hidden;
+    border-right: 1px solid rgb(92, 217, 30);
+    white-space: nowrap;
+    animation: animated-text 4s steps(50, end),
+    animated-caret .75s step-end infinite;
+  }
+
+  form, input, input:focus{
+    display: inline-block;
+    border-color: transparent;
+    background-color: transparent;
+    color: rgb(92, 217, 30);
+    font-size: 20px;
+    outline: none;
+    width: 370px;
+    caret-color: rgb(92, 217, 30);
+    margin-left: -0.2%;
+    margin-top: -0.3%;
+  }
+
+  input:-webkit-autofill {
+      -webkit-animation-delay: 1s;
+      -webkit-animation-name: autofill;
+      -webkit-animation-fill-mode: both;
+  }
+
+  @keyframes scanlines{
+    from{top: 0;}
+    to{top: 93%;}
+  }
+
+  @keyframes screen-flicker {
+    0% {
+      opacity: 0.28;
+    }
+    5% {
+      opacity: 0.35;
+    }
+    10% {
+      opacity: 0.24;
+    }
+    15% {
+      opacity: 0.91;
+    }
+    20% {
+      opacity: 0.18;
+    }
+    25% {
+      opacity: 0.84;
+    }
+    30% {
+      opacity: 0.66;
+    }
+    35% {
+      opacity: 0.68;
+    }
+    40% {
+      opacity: 0.27;
+    }
+    45% {
+      opacity: 0.85;
+    }
+    50% {
+      opacity: 0.96;
+    }
+    55% {
+      opacity: 0.09;
+    }
+    60% {
+      opacity: 0.20;
+    }
+    65% {
+      opacity: 0.72;
+    }
+    70% {
+      opacity: 0.53;
+    }
+    75% {
+      opacity: 0.37;
+    }
+    80% {
+      opacity: 0.71;
+    }
+    85% {
+      opacity: 0.70;
+    }
+    90% {
+      opacity: 0.70;
+    }
+    95% {
+      opacity: 0.36;
+    }
+    100% {
+      opacity: 0.24;
+    }
+  }
+
+  @keyframes animated-text{
+    from{width: 0;}
+    to{width: 250px;}
+  }
+
+  @keyframes animated-caret{
+    from, to { border-color: transparent }
+    50% { border-color: rgb(92, 217, 30) }
+  }
+
+  @keyframes glow{
+    0% {box-shadow: 0px 0px 5px 1px rgb(58, 140, 18);}
+    25% {box-shadow: 0px 0px 5px 2px rgb(58, 140, 18);}
+    50% {box-shadow: 0px 0px 5px 3px rgb(58, 140, 18);}
+    75% {box-shadow: 0px 0px 5px 4px rgb(58, 140, 18);}
+    100% {box-shadow: 0px 0px 5px 5px rgb(58, 140, 18);}
+  }
+
+  @-webkit-keyframes autofill {
+    0%,100% {
+      color: rgb(92, 217, 30);
+      background: transparent;
+    }
   }
 }
