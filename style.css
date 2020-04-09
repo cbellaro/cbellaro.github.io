@@ -41,6 +41,20 @@
   animation-direction: alternate;
 }
 
+.screen::before{
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  z-index: -2;
+  background-size: 100% 20px, 3px 100%;
+  pointer-events: none;
+}
+
 .screen::after{
   content: "";
   background: rgba(18, 16, 16, 0.1);
@@ -55,13 +69,25 @@
   animation: screen-flicker 2s infinite;
 }
 
-.scanlines {
+.scanline1 {
   position: absolute;
-  height: 50px;
+  height: 10px;
+  width: 100%;
+  background-color: green;
+  opacity: 0.1;
+  animation: scanlines 4s infinite;
+  animation-direction: reverse;
+}
+
+.scanline2 {
+  position: absolute;
+  height: 10px;
   width: 100%;
   background-color: green;
   opacity: 0.1;
   animation: scanlines 5s infinite;
+  animation-delay: 1s;
+  animation-direction: reverse;
 }
 
 .banner{
@@ -233,6 +259,20 @@
     animation-direction: alternate;
   }
 
+  .screen::before{
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    z-index: -2;
+    background-size: 100% 20px, 3px 100%;
+    pointer-events: none;
+  }
+
   .screen::after{
     content: "";
     background: rgba(18, 16, 16, 0.1);
@@ -247,13 +287,25 @@
     animation: screen-flicker 2s infinite;
   }
 
-  .scanlines {
+  .scanline1 {
     position: absolute;
-    height: 50px;
+    height: 10px;
+    width: 100%;
+    background-color: green;
+    opacity: 0.1;
+    animation: scanlines 4s infinite;
+    animation-direction: reverse;
+  }
+
+  .scanline2 {
+    position: absolute;
+    height: 10px;
     width: 100%;
     background-color: green;
     opacity: 0.1;
     animation: scanlines 5s infinite;
+    animation-delay: 1s;
+    animation-direction: reverse;
   }
 
   .banner{
@@ -426,6 +478,20 @@
     animation-direction: alternate;
   }
 
+  .screen::before{
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    z-index: -2;
+    background-size: 100% 20px, 3px 100%;
+    pointer-events: none;
+  }
+
   .screen::after{
     content: "";
     background: rgba(18, 16, 16, 0.1);
@@ -440,13 +506,25 @@
     animation: screen-flicker 2s infinite;
   }
 
-  .scanlines {
+  .scanline1 {
     position: absolute;
-    height: 50px;
+    height: 10px;
+    width: 100%;
+    background-color: green;
+    opacity: 0.1;
+    animation: scanlines 4s infinite;
+    animation-direction: reverse;
+  }
+
+  .scanline2 {
+    position: absolute;
+    height: 10px;
     width: 100%;
     background-color: green;
     opacity: 0.1;
     animation: scanlines 5s infinite;
+    animation-delay: 1s;
+    animation-direction: reverse;
   }
 
   .banner{
@@ -619,6 +697,20 @@
     animation-direction: alternate;
   }
 
+  .screen::before{
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    z-index: -2;
+    background-size: 100% 20px, 3px 100%;
+    pointer-events: none;
+  }
+
   .screen::after{
     content: "";
     background: rgba(18, 16, 16, 0.1);
@@ -633,13 +725,25 @@
     animation: screen-flicker 2s infinite;
   }
 
-  .scanlines {
+  .scanline1 {
     position: absolute;
-    height: 50px;
+    height: 10px;
+    width: 100%;
+    background-color: green;
+    opacity: 0.1;
+    animation: scanlines 4s infinite;
+    animation-direction: reverse;
+  }
+
+  .scanline2 {
+    position: absolute;
+    height: 10px;
     width: 100%;
     background-color: green;
     opacity: 0.1;
     animation: scanlines 5s infinite;
+    animation-delay: 1s;
+    animation-direction: reverse;
   }
 
   .banner{
