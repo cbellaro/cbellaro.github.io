@@ -11,7 +11,7 @@ $(() => {
     } else if (userInput === "run doodle_duel.exe" || userInput === "run doodle duel.exe" || userInput === "run doodle-duel.exe"){
       window.open("https://doodle-duel-frontend.herokuapp.com/")
     } else if (userInput === "run resume.exe"){
-      window.open("https://docs.google.com/document/d/1ROvZV0goACfaDSJS7d_4RiFPWkCPN-nCa3Z1t0HBAvo")
+      window.open("https://docs.google.com/document/d/15Tu8xUn_TIs4eEX32bRWLBkKd1ooUREcxWQtuXdD-nY/edit?usp=sharing")
     } else if (userInput === "run blog.exe"){
       window.open("https://medium.com/@cbellaro")
     } else if (userInput === "run github.exe"){
